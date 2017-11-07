@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nlibrary(REmap)\n\nshinyUI(\n  fluidPage(\n    #设置主题\n    titlePanel(\"Data From China\"),\n    #设置左侧输入栏、设置右侧展示栏\n    sidebarLayout(\n      #设置左侧输入栏\n      sidebarPanel(\n        #1:设置选项卡\n        selectInput(inputId=\"Data\",label = \"客户数据\",\n                    choices = c(\"Person_Count\",\"Money_Count\"))\n        \n      ),\n      #设置右侧展示栏\n      mainPanel(\n        REmapOutput(\"chinamap\"),\n        tableOutput(\"view_table\")\n        \n      )\n    )\n  )\n)\n",
+    "created" : 1510045111665.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2904514249",
+    "id" : "6604CF43",
+    "lastKnownWriteTime" : 1510045192,
+    "last_content_update" : 1510045192747,
+    "path" : "~/REmap_China/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
